@@ -1,23 +1,40 @@
 import express from 'express';
-import cors from 'cors';
 import { createServer } from 'http';
+import { PubSub } from 'apollo-server';
 import { ApolloServer, gql } from 'apollo-server-express';
 
 const app = express();
 
-app.use(cors());
+const pubsub = new PubSub();
+const MESSAGE_CREATED = 'MESSAGE_CREATED';
 
 const typeDefs = gql`
   type Query {
-    "A simple type for getting started!"
-    hello: String
+    messages: [Message!]!
+  }
+
+  type Subscription {
+    messageCreated: Message
+  }
+
+  type Message {
+    id: String
+    content: String
   }
 `;
 
 const resolvers = {
   Query: {
-    hello: () => 'world'
-  }
+    messages: () => [
+      { id: 0, content: 'Hello!' },
+      { id: 1, content: 'Bye!' },
+    ],
+  },
+  Subscription: {
+    messageCreated: {
+      subscribe: () => pubsub.asyncIterator(MESSAGE_CREATED),
+    },
+  },
 };
 
 const server = new ApolloServer({
@@ -33,3 +50,13 @@ server.installSubscriptionHandlers(httpServer);
 httpServer.listen({ port: 8000 }, () => {
   console.log('Apollo Server on http://localhost:8000/graphql');
 });
+
+let id = 2;
+
+setInterval(() => {
+  pubsub.publish(MESSAGE_CREATED, {
+    messageCreated: { id, content: new Date().toString() },
+  });
+
+  id++;
+}, 1000);
