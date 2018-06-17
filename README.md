@@ -1,11 +1,11 @@
 # apollo-server-subscription-setup-example
 
-A minimal Apollo Server with Apollo Client application setting up subscriptions.
+A minimal Apollo Server 2 with Apollo Client 2 application with subscriptions.
 
 ## Installation
 
-* `git clone git@github.com:rwieruch/apollo-server-subscription-setup-example.git`
-* `cd apollo-server-subscription-setup-example`
+* `git clone git@github.com:rwieruch/apollo-server-subscription-example.git`
+* `cd apollo-server-subscription-example`
 
 ### Server
 
