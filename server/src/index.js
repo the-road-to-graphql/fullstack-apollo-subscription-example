@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-// import { createServer } from 'http';
+import { createServer } from 'http';
 import { ApolloServer, gql } from 'apollo-server-express';
 
 const app = express();
@@ -27,10 +27,9 @@ const server = new ApolloServer({
 
 server.applyMiddleware({ app, path: '/graphql' });
 
-// const httpServer = createServer(app);
-// server.installSubscriptionHandlers(httpServer);
+const httpServer = createServer(app);
+server.installSubscriptionHandlers(httpServer);
 
-// httpServer.listen({ port: 8000 }, () =>
-app.listen({ port: 8000 }, () => {
+httpServer.listen({ port: 8000 }, () => {
   console.log('Apollo Server on http://localhost:8000/graphql');
 });
