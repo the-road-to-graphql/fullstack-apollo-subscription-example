@@ -1,4 +1,4 @@
-# apollo-server-subscription-setup-example
+# apollo-server-subscription-example
 
 A minimal Apollo Server 2 with Apollo Client 2 application with subscriptions.
 
