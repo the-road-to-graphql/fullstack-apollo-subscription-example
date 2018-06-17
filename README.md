@@ -1,11 +1,11 @@
-# apollo-server-subscription-example
+# fullstack-apollo-subscription-example
 
 A minimal Apollo Server 2 with Apollo Client 2 application with subscriptions.
 
 ## Installation
 
-* `git clone git@github.com:rwieruch/apollo-server-subscription-example.git`
-* `cd apollo-server-subscription-example`
+* `git clone git@github.com:rwieruch/fullstack-apollo-subscription-example.git`
+* `cd fullstack-apollo-subscription-example`
 
 ### Server
 
