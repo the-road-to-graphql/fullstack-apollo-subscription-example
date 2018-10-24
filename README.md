@@ -1,6 +1,6 @@
 # fullstack-apollo-subscription-example
 
-[![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/)
+[![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/the-road-to-graphql/fullstack-apollo-subscription-example.svg)](https://greenkeeper.io/)
 
 A minimal Apollo Server 2 with Apollo Client 2 application with subscriptions.
 
