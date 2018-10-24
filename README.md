@@ -1,6 +1,6 @@
 # fullstack-apollo-subscription-example
 
-[![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/)
+[![Build Status](https://travis-ci.org/the-road-to-graphql/fullstack-apollo-subscription-example.svg?branch=master)](https://travis-ci.org/the-road-to-graphql/fullstack-apollo-subscription-example) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/)
 
 A minimal Apollo Server 2 with Apollo Client 2 application with subscriptions.
 
