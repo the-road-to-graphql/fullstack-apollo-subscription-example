@@ -7,6 +7,9 @@ const GET_MESSAGES = gql`
     messages {
       id
       content
+      author {
+        name
+      }
     }
   }
 `;
@@ -16,6 +19,9 @@ const MESSAGE_CREATED = gql`
     messageCreated {
       id
       content
+      author {
+        name
+      }
     }
   }
 `;
@@ -62,7 +68,7 @@ class Messages extends React.Component {
     return (
       <ul>
         {this.props.messages.map(message => (
-          <li key={message.id}>{message.content}</li>
+          <li key={message.id}>{message.content} {message.author.name}</li>
         ))}
       </ul>
     );
