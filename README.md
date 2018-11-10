@@ -22,6 +22,12 @@ A minimal Apollo Server 2 with Apollo Client 2 application with subscriptions.
 * `npm start`
 * visit `http://localhost:3000`
 
+### Activate subscription
+
+```
+curl -d '{"query": "mutation AddMessage($id: Int, $content: String, $authorId: Int) { addMessage(id: $id, content: $content, authorId: $authorId) }", "variables": { "authorId": 88, "content": "Subscribed!", "id": 56 } }' -H 'Content-Type: application/json' localhost:8000/graphql
+```
+
 ## Want to learn more about React + GraphQL + Apollo?
 
 * Don't miss [upcoming Tutorials and Courses](https://www.getrevue.co/profile/rwieruch)
